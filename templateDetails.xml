@@ -85,8 +85,9 @@
                     <option value="1">JYES</option>
                 </field>
             </fieldset>
-            <!-- LOGO-->
-            <fieldset  name="logo" type="upload_func" label="Logo">
+            <!-- LOGO and page title-->
+            <fieldset name="logo" type="upload_func" label="Logo and page title">
+                <field name="page_title" type="text" label="Page title:" description="Set the page title, which is shown in the header."></field>
                 <field name="logo_file" type="media" label="Select your logo:"></field>
                 <field name="logo_link" type="text" label="Logo link:"  description="Example: http://www.ordasoft.com" default="index.php"></field>
                 <field name="logo_width" type="text" label="Logo width:" description="Example: 90" default="173"></field>

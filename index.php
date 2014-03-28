@@ -47,7 +47,7 @@ include 'includes/params.php';
                     <!-- header -->
                     <div role="banner" id="header">
                         <div class="pull-left">
-                            <h1>TODO Insert Page Title here</h1>
+                            <h1><?php echo $this->params->get('page_title') ?></h1>
                         </div>
                         <div class="pull-right">
                             <a href="<?php echo $this->params->get('logo_link') ?>">
