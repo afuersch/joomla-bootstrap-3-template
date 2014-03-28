@@ -20,7 +20,6 @@ include 'includes/params.php';
         <div class="wrapper">
             <header>
                 <div class="container">
-
                     <nav role="navigation" id="topnav">
                         <!--top-->
                         <?php if ($this->countModules('top')) : ?>
@@ -44,132 +43,138 @@ include 'includes/params.php';
                         <?php endif; ?>
                         <!-- top-right -->
                     </nav>
+                    <div class="clearfix"></div>
+                    <!-- header -->
+                    <div role="banner" id="header">
+                        <div class="pull-left">
+                            <h1>TODO Insert Page Title here</h1>
+                        </div>
+                        <div class="pull-right">
+                            <a href="<?php echo $this->params->get('logo_link') ?>">
+                                <img style="width:<?php echo $this->params->get('logo_width') ?>px; height:<?php echo $this->params->get('logo_height') ?>px; "
+                                     src="<?php echo $this->params->get('logo_file') ?>" 
+                                     alt="Logo" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- header -->
                 </div>
             </header>
 
-            <div id="wrap">
-                <!--Navigation-->
-                <div id="navigation">
+            <!--navigation-->
+            <nav class="navbar navbar-default" role="navigation" id="mainnav">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <?php if ($this->countModules('navigation')) : ?>
+                            <jdoc:include type="modules" name="navigation" style="none" />
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </nav>
+            <!--navigation-->
+
+            <!--fullwidth-->
+            <?php if ($this->countModules('fullwidth')) : ?>
+                <div id="fullwidth">
+                    <div class="row">
+                        <jdoc:include type="modules" name="fullwidth" style="block"/>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <!--fullwidth-->
+            <!--Showcase-->
+            <?php if ($this->countModules('showcase')) : ?>
+                <div id="showcase">
                     <div class="container">
-                        <div class="navbar navbar-default" role="navigation">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <div id="brand">
-                                    <a href="<?php echo $this->params->get('logo_link') ?>">
-                                        <img style="width:<?php echo $this->params->get('logo_width') ?>px; height:<?php echo $this->params->get('logo_height') ?>px; " src="<?php echo $this->params->get('logo_file') ?>" alt="Logo" />
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="navbar-collapse collapse">
-                                <?php if ($this->countModules('navigation')) : ?>
-                                    <nav class="navigation" role="navigation">
-                                        <jdoc:include type="modules" name="navigation" style="none" />
-                                    </nav>
-                                <?php endif; ?>
-                            </div>
+                        <div class="row">
+                            <jdoc:include type="modules" name="showcase" style="block"/>
                         </div>
                     </div>
                 </div>
-                <!--Navigation-->
-                <!--fullwidth-->
-                <?php if ($this->countModules('fullwidth')) : ?>
-                    <div id="fullwidth">
+            <?php endif; ?>
+            <!--Showcase-->
+            <!--Feature-->
+            <?php if ($this->countModules('feature')) : ?>
+                <div id="feature">
+                    <div class="container">
                         <div class="row">
-                            <jdoc:include type="modules" name="fullwidth" style="block"/>
+                            <jdoc:include type="modules" name="feature" style="block" />        
                         </div>
                     </div>
+                </div>
+            <?php endif; ?>
+            <!--Feature-->
+            <!--content-->
+            <div class="container">
+                <!--breadcrumbs-->
+                <?php if ($this->countModules('breadcrumbs')) : ?>
+                    <jdoc:include type="modules" name="breadcrumbs" style="none" />
                 <?php endif; ?>
-                <!--fullwidth-->
-                <!--Showcase-->
-                <?php if ($this->countModules('showcase')) : ?>
-                    <div id="showcase">
-                        <div class="container">
-                            <div class="row">
-                                <jdoc:include type="modules" name="showcase" style="block"/>
-                            </div>
-                        </div>
-                    </div>
-                <?php endif; ?>
-                <!--Showcase-->
-                <!--Feature-->
-                <?php if ($this->countModules('feature')) : ?>
-                    <div id="feature">
-                        <div class="container">
-                            <div class="row">
-                                <jdoc:include type="modules" name="feature" style="block" />        
-                            </div>
-                        </div>
-                    </div>
-                <?php endif; ?>
-                <!--Feature-->
-                <!-- Content -->
-                <div class="container">
-                    <?php if ($this->countModules('breadcrumbs')) : ?>
-                        <div id="breadcrumbs">        
+                <!--breadcrumbs-->
 
-                            <div class="row">
-                                <jdoc:include type="modules" name="breadcrumbs" style="block" />
+                <div id="main" class="row show-grid">
+                    <!--left-->
+                    <?php if ($this->countModules('left')) : ?>
+                        <nav id="sidebar" class="sidebar col-sm-<?php echo $leftcolgrid; ?>">
+                            <jdoc:include type="modules" name="left" style="xhtml" />
+                        </nav>
+                    <?php endif; ?>
+                    <!--left-->
+                    <!--component-->
+                    <div id="container" class="col-sm-<?php echo (12 - $leftcolgrid - $rightcolgrid); ?>">
+                        <!-- Content-top Module Position -->        
+                        <?php if ($this->countModules('content-top')) : ?>
+                            <div id="content-top">
+                                <div class="row">
+                                    <jdoc:include type="modules" name="content-top" style="block" />        
+                                </div>
                             </div>
-
+                        <?php endif; ?>
+                        <div class="main-box">
+                            <jdoc:include type="component" />
+                            <jdoc:include type="message" />        
+                        </div>
+                        <!-- Below Content Module Position -->        
+                        <?php if ($this->countModules('content-bottom')) : ?>
+                            <div id="content-bottom">
+                                <div class="row">
+                                    <jdoc:include type="modules" name="content-bottom" style="block" />	
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                    <!--component-->
+                    <!--right-->
+                    <?php if ($this->countModules('right')) : ?>
+                        <div id="sidebar-2" class="col-sm-<?php echo $rightcolgrid; ?>">
+                            <jdoc:include type="modules" name="right" style="xhtml" />
                         </div>
                     <?php endif; ?>
-                    <div id="main" class="row show-grid">
-                        <!-- Left -->
-                        <?php if ($this->countModules('left')) : ?>
-                            <div id="sidebar" class="col-sm-<?php echo $leftcolgrid; ?>">
-                                <jdoc:include type="modules" name="left" style="xhtml" />
-                            </div>
-                        <?php endif; ?>
-                        <!-- Component -->
-                        <div id="container" class="col-sm-<?php echo (12 - $leftcolgrid - $rightcolgrid); ?>">
-                            <!-- Content-top Module Position -->        
-                            <?php if ($this->countModules('content-top')) : ?>
-                                <div id="content-top">
-                                    <div class="row">
-                                        <jdoc:include type="modules" name="content-top" style="block" />        
-                                    </div>
-                                </div>
-                            <?php endif; ?>
-                            <div class="main-box">
-                                <jdoc:include type="component" />
-                                <jdoc:include type="message" />        
-                            </div>
-                            <!-- Below Content Module Position -->        
-                            <?php if ($this->countModules('content-bottom')) : ?>
-                                <div id="content-bottom">
-                                    <div class="row">
-                                        <jdoc:include type="modules" name="content-bottom" style="block" />	
-                                    </div>
-                                </div>
-                            <?php endif; ?>
+                    <!--right-->
+                </div>
+            </div>
+            <!--content-->
+            <!-- bottom -->
+            <?php if ($this->countModules('bottom')) : ?>
+                <div id="bottom">
+                    <div class="container">
+                        <div class="row">
+                            <jdoc:include type="modules" name="bottom" style="block" />
                         </div>
-                        <!-- Right -->
-                        <?php if ($this->countModules('right')) : ?>
-                            <div id="sidebar-2" class="col-sm-<?php echo $rightcolgrid; ?>">
-                                <jdoc:include type="modules" name="right" style="xhtml" />
-                            </div>
-                        <?php endif; ?>
                     </div>
                 </div>
-                <!-- Content -->
-                <!-- bottom -->
-                <?php if ($this->countModules('bottom')) : ?>
-                    <div id="bottom">
-                        <div class="container">
-                            <div class="row">
-                                <jdoc:include type="modules" name="bottom" style="block" />
-                            </div>
-                        </div>
-                    </div>
-                <?php endif; ?>
-                <div id="push"></div>
-                <!-- bottom -->
-            </div>
+            <?php endif; ?>
+            <div id="push"></div>
+            <!-- bottom -->
+
             <!-- footer -->
             <?php if ($this->countModules('footer')) : ?>
                 <div id="footer">
