@@ -1,10 +1,9 @@
-<?php  
-/*------------------------------------------------------------------------
-# author    Gonzalo Suez
-# copyright Copyright (C) 2013 gsuez.cl. All rights reserved.
-# @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-# Website   http://www.gsuez.cl
--------------------------------------------------------------------------*/
+<?php
+/* ------------------------------------------------------------------------
+  # author Adrian Fürschuß
+  # copyright Copyright © 2014 afuersch. All rights reserved.
+  # @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+  ------------------------------------------------------------------------- */
 defined('_JEXEC') or die;
 
 /**
@@ -22,24 +21,41 @@ defined('_JEXEC') or die;
  */
 
 /*
- * Module chrome for rendering the module in a submenu
+ * custom style for modules, supporting bootstrap size setting.
  */
-function modChrome_block($module, &$params, &$attribs)
-{
- 	if (!empty ($module->content)) : ?>
-           <div class="block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
-           	<div class="moduletable">           	
-	           	<?php if ($module->showtitle != 0) : ?>
-			<div class="module-title">
-	                		<h3 class="title"><?php echo $module->title; ?></h3>
-			</div>
-	                	<?php endif; ?>
-	                	<div class="module-content">
-	                		<?php echo $module->content; ?>
-	                	</div>
-              </div>             	
-           </div>
-	<?php endif;
+function modChrome_custom($module, &$params, &$attribs) {
+    if (!empty($module->content)) :
+        ?>
+        <div class="<?php if ($params->get('bootstrap_size') != '') : ?><?php echo "col-md-" . $params->get('bootstrap_size'); ?><?php endif; ?> <?php if ($params->get('moduleclass_sfx') != '') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+                <?php if ($module->showtitle != 0) : ?>
+                        <h3 class="title"><?php echo $module->title; ?></h3>
+                <?php endif; ?>
+                    <?php echo $module->content; ?>
+        </div>
+    <?php
+    endif;
 }
 
+/*
+ * Module chrome for rendering the module in a submenu
+ */
+
+function modChrome_block($module, &$params, &$attribs) {
+    if (!empty($module->content)) :
+        ?>
+        <div class="block <?php if ($params->get('moduleclass_sfx') != '') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <div class="moduletable">           	
+        <?php if ($module->showtitle != 0) : ?>
+                    <div class="module-title">
+                        <h3 class="title"><?php echo $module->title; ?></h3>
+                    </div>
+                    <?php endif; ?>
+                <div class="module-content">
+        <?php echo $module->content; ?>
+                </div>
+            </div>             	
+        </div>
+    <?php
+    endif;
+}
 ?>

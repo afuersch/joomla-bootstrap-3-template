@@ -20,6 +20,7 @@ include 'includes/params.php';
         <div class="wrapper">
             <header>
                 <div class="container">
+                    <?php if ($this->countModules('top + top-left + top-right')) : ?>
                     <nav role="navigation" id="topnav">
                         <!--top-->
                         <?php if ($this->countModules('top')) : ?>
@@ -43,6 +44,7 @@ include 'includes/params.php';
                         <?php endif; ?>
                         <!-- top-right -->
                     </nav>
+                    <?php endif; ?>
                     <div class="clearfix"></div>
                     <!-- header -->
                     <div role="banner" id="header">
@@ -95,7 +97,7 @@ include 'includes/params.php';
                 <div id="showcase">
                     <div class="container">
                         <div class="row">
-                            <jdoc:include type="modules" name="showcase" style="block"/>
+                            <jdoc:include type="modules" name="showcase" style="custom"/>
                         </div>
                     </div>
                 </div>
@@ -106,7 +108,7 @@ include 'includes/params.php';
                 <div id="feature">
                     <div class="container">
                         <div class="row">
-                            <jdoc:include type="modules" name="feature" style="block" />        
+                            <jdoc:include type="modules" name="feature" style="custom" />        
                         </div>
                     </div>
                 </div>
@@ -167,7 +169,7 @@ include 'includes/params.php';
                 <div id="bottom">
                     <div class="container">
                         <div class="row">
-                            <jdoc:include type="modules" name="bottom" style="block" />
+                            <jdoc:include type="modules" name="bottom" style="custom" />
                         </div>
                     </div>
                 </div>
@@ -180,7 +182,7 @@ include 'includes/params.php';
                 <div id="footer">
                     <div class="container">
                         <div class="row">
-                            <jdoc:include type="modules" name="footer" style="block" />
+                            <jdoc:include type="modules" name="footer" style="custom" />
                         </div>
                     </div>
                 </div>
