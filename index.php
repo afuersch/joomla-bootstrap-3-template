@@ -194,32 +194,6 @@ include 'includes/params.php';
         <!-- page -->        
         <!-- JS -->
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-            (function($) {
-                $(document).ready(function() {
-                    // dropdown
-                    if ($('.parent').children('ul').length > 0) {
-                        $('.parent').addClass('dropdown');
-                        $('.parent > a').addClass('dropdown-toggle');
-                        $('.parent > a').attr('data-toggle', 'dropdown');
-                        $('.parent > a').append('<b class="caret"></b>');
-                        $('.parent > ul').addClass('dropdown-menu');
-                    }
-                });
-            })(jQuery);
-        </script>
-        <script type="text/javascript">
-            $('.dropdown input').click(function(e) {
-                e.stopPropagation();
-            });
-        </script>
-        <script type="text/javascript">
-            $('.dropdown-menu .dropdown-submenu a[data-toggle="dropdown-submenu"]').click(function(e)
-            {
-                e.stopPropagation();
-            });
-        </script>
-
         <!-- JS -->
     </body>
 </html>
