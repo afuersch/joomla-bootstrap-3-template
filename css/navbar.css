@@ -1,59 +1,77 @@
-body {
-
-  padding-bottom: 20px;
+.parent {
+  position: relative;
 }
-
-.navbar {
-  margin-bottom: 20px;
+.nav-child {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
 }
-
-.navbar-default {
-    background-color: rgba(0, 0, 0, 0);
-    background-image: none;
-    border-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
+.nav-child.pull-right {
+  right: 0;
+  left: auto;
 }
-
-/*
-.sidebar-nav {
-    padding: 9px 0;
+.nav-child .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
 }
-
-.dropdown-menu .sub-menu {
-    left: 100%;
-    position: absolute;
-    top: 0;
-    visibility: hidden;
-    margin-top: -1px;
+.nav-child > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333333;
+  white-space: nowrap;
 }
-
-.dropdown-menu li:hover .sub-menu {
-    visibility: visible;
+.nav-child > li > a:hover,
+.nav-child > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
 }
-
-.dropdown:hover .dropdown-menu {
-    display: block;
+.nav-child > .active > a,
+.nav-child > .active > a:hover,
+.nav-child > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #428bca;
 }
-
-.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
-    margin-top: 0;
+.nav-child > .disabled > a,
+.nav-child > .disabled > a:hover,
+.nav-child > .disabled > a:focus {
+  color: #999999;
 }
-
-.navbar .sub-menu:before {
-    border-bottom: 7px solid transparent;
-    border-left: none;
-    border-right: 7px solid rgba(0, 0, 0, 0.2);
-    border-top: 7px solid transparent;
-    left: -7px;
-    top: 10px;
+.nav-child > .disabled > a:hover,
+.nav-child > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
 }
-.navbar .sub-menu:after {
-    border-top: 6px solid transparent;
-    border-left: none;
-    border-right: 6px solid #fff;
-    border-bottom: 6px solid transparent;
-    left: 10px;
-    top: 11px;
-    left: -6px;
+.parent:hover .nav-child {
+  display: block;
 }
-*/
+.nav-tabs .nav-child,
+.nav-pills .nav-child,
+.navbar .nav-child {
+  margin-top: 0;
+}
