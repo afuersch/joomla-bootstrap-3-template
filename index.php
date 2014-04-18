@@ -1,8 +1,10 @@
 <?php
 /* ------------------------------------------------------------------------
-  # author Adrian Fürschuß
-  # copyright Copyright © 2014 afuersch. All rights reserved.
-  # @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+  # author    Gonzalo Suez
+  # author    Adrian Fürschuß
+  # copyright Copyright © 2013 gsuez.cl. All rights reserved.
+  # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+  # Website   http://www.gsuez.cl
   ------------------------------------------------------------------------- */
 // no direct access
 defined('_JEXEC') or die;
@@ -21,29 +23,29 @@ include 'includes/params.php';
             <header>
                 <div class="container">
                     <?php if ($this->countModules('top + top-left + top-right')) : ?>
-                    <nav role="navigation" id="topnav">
-                        <!--top-->
-                        <?php if ($this->countModules('top')) : ?>
-                            <div class="row">
-                                <jdoc:include type="modules" name="top" style="none" />        
-                            </div>
-                        <?php endif; ?>
-                        <!--top-->
-                        <!-- top-left -->
-                        <?php if ($this->countModules('top-left')) : ?>
-                            <div class="pull-left">
-                                <jdoc:include type="modules" name="top-left" style="none" />
-                            </div>
-                        <?php endif; ?>
-                        <!-- top-left -->
-                        <!-- top-right -->
-                        <?php if ($this->countModules('top-right')) : ?>
-                            <div class="pull-right">
-                                <jdoc:include type="modules" name="top-right" style="none" />
-                            </div>
-                        <?php endif; ?>
-                        <!-- top-right -->
-                    </nav>
+                        <nav role="navigation" id="topnav">
+                            <!--top-->
+                            <?php if ($this->countModules('top')) : ?>
+                                <div class="row">
+                                    <jdoc:include type="modules" name="top" style="none" />        
+                                </div>
+                            <?php endif; ?>
+                            <!--top-->
+                            <!-- top-left -->
+                            <?php if ($this->countModules('top-left')) : ?>
+                                <div class="pull-left">
+                                    <jdoc:include type="modules" name="top-left" style="none" />
+                                </div>
+                            <?php endif; ?>
+                            <!-- top-left -->
+                            <!-- top-right -->
+                            <?php if ($this->countModules('top-right')) : ?>
+                                <div class="pull-right">
+                                    <jdoc:include type="modules" name="top-right" style="none" />
+                                </div>
+                            <?php endif; ?>
+                            <!-- top-right -->
+                        </nav>
                     <?php endif; ?>
                     <div class="clearfix"></div>
                     <!-- header -->
@@ -181,9 +183,7 @@ include 'includes/params.php';
             <?php if ($this->countModules('footer')) : ?>
                 <div id="footer">
                     <div class="container">
-                        <div class="row">
-                            <jdoc:include type="modules" name="footer" style="custom" />
-                        </div>
+                        <jdoc:include type="modules" name="footer" style="custom" />
                     </div>
                 </div>
             <?php endif; ?>

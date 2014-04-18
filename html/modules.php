@@ -26,7 +26,7 @@ defined('_JEXEC') or die;
 function modChrome_custom($module, &$params, &$attribs) {
     if (!empty($module->content)) :
         ?>
-        <div class="<?php if ($params->get('bootstrap_size') != '') : ?><?php echo "col-md-" . $params->get('bootstrap_size'); ?><?php endif; ?> <?php if ($params->get('moduleclass_sfx') != '') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+        <div class="<?php if ($params->get('bootstrap_size') != '0') : ?><?php echo "col-md-" . $params->get('bootstrap_size'); ?><?php endif; ?> <?php if ($params->get('moduleclass_sfx') != '') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
                 <?php if ($module->showtitle != 0) : ?>
                         <h3 class="title"><?php echo $module->title; ?></h3>
                 <?php endif; ?>
