@@ -25,6 +25,7 @@ $doc->addScript('templates/' . $this->template . '/js/holder.js');
 $doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.min.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/navbar.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
+$doc->addStyleSheet('templates/' . $this->template . '/css/custom.css');
 // Variables
 $app = JFactory::getApplication();
 $doc = JFactory::getDocument();
