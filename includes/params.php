@@ -21,7 +21,6 @@ $doc->addScript('templates/' . $this->template . '/js/jquery-noconflict.js');
 // Include all compiled plugins (below), or include individual files as needed 
 $doc->addScript('templates/' . $this->template . '/js/bootstrap.min.js');
 $doc->addScript('templates/' . $this->template . '/js/holder.js');
-$doc->addScript('templates/' . $this->template . '/js/dropdown.js');
 // Add Stylesheets
 $doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.min.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/navbar.css');
