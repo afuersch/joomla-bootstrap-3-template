@@ -26,5 +26,4 @@ defined('_JEXEC') or die;
         </style>
 <?php endif; ?>
 <![endif]-->
-
 </head>

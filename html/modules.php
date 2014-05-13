@@ -19,7 +19,6 @@ defined('_JEXEC') or die;
  * NOTICE: All chrome wrapping methods should be named: modChrome_{STYLE} and take the same
  * two arguments.
  */
-
 /*
  * custom style for modules, supporting bootstrap size setting.
  */
@@ -27,12 +26,31 @@ function modChrome_custom($module, &$params, &$attribs) {
     if (!empty($module->content)) :
         ?>
         <div class="<?php if ($params->get('bootstrap_size') != '0') : ?><?php echo "col-md-" . $params->get('bootstrap_size'); ?><?php endif; ?> <?php if ($params->get('moduleclass_sfx') != '') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
-                <?php if ($module->showtitle != 0) : ?>
-                        <h3 class="title"><?php echo $module->title; ?></h3>
-                <?php endif; ?>
-                    <?php echo $module->content; ?>
+            <?php if ($module->showtitle != 0) : ?>
+                <h3 class="title"><?php echo $module->title; ?></h3>
+            <?php endif; ?>
+            <?php echo $module->content; ?>
         </div>
-    <?php
+        <?php
+    endif;
+}
+
+/*
+ * custom style for modules, supporting bootstrap size setting.
+ */
+
+function modChrome_footer($module, &$params, &$attribs) {
+    if (!empty($module->content)) :
+        ?>
+        <div class="<?php if ($params->get('moduleclass_sfx') != '') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <div class="<?php if ($params->get('bootstrap_size') != '0') : ?><?php echo "row"; ?><?php endif; ?>">
+                <?php if ($module->showtitle != 0) : ?>
+                    <h3 class="title"><?php echo $module->title; ?></h3>
+                <?php endif; ?>
+                <?php echo $module->content; ?>
+            </div>
+        </div>
+        <?php
     endif;
 }
 
@@ -45,17 +63,17 @@ function modChrome_block($module, &$params, &$attribs) {
         ?>
         <div class="block <?php if ($params->get('moduleclass_sfx') != '') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
             <div class="moduletable">           	
-        <?php if ($module->showtitle != 0) : ?>
+                <?php if ($module->showtitle != 0) : ?>
                     <div class="module-title">
                         <h3 class="title"><?php echo $module->title; ?></h3>
                     </div>
-                    <?php endif; ?>
+                <?php endif; ?>
                 <div class="module-content">
-        <?php echo $module->content; ?>
+                    <?php echo $module->content; ?>
                 </div>
             </div>             	
         </div>
-    <?php
+        <?php
     endif;
 }
 ?>

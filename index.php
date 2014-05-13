@@ -176,24 +176,20 @@ include 'includes/params.php';
                     </div>
                 </div>
             <?php endif; ?>
-            <div id="push"></div>
             <!-- bottom -->
-
+        </div>
+        <div class="push"></div>
+        <footer>
             <!-- footer -->
             <?php if ($this->countModules('footer')) : ?>
-                <div id="footer">
-                    <div class="container">
-                        <jdoc:include type="modules" name="footer" style="custom" />
-                    </div>
-                </div>
+                <jdoc:include type="modules" name="footer" style="footer" />
             <?php endif; ?>
             <!-- footer -->
-        </div>
+        </footer>
 
         <jdoc:include type="modules" name="debug" />        
         <!-- page -->        
         <!-- JS -->
-        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.min.js"></script>
         <!-- JS -->
     </body>
 </html>

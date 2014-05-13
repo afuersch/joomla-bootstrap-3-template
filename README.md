@@ -5,7 +5,7 @@ This nice joomla template with bootstrap 3 was created by Gonzalo Suez. See the 
 I forked his repository to build on this template and make changes, which meet my demands.
 Thanks a lot to Gonzalo to make my start a little bit easier.
 
-This template is based in Twitter Bootstrap 3, for Joomla! 3.x
+This template is based on Twitter Bootstrap 3, for Joomla! 3.x
 
 <h3>Some features:</h3>
 <ul>
