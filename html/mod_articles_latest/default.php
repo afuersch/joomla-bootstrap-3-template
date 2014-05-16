@@ -9,13 +9,13 @@
  */
 defined('_JEXEC') or die;
 ?>
-<div class="list-group latestnews<?php echo $moduleclass_sfx; ?>">
+<div class="list-group latestnews<?= $moduleclass_sfx ?>">
     <?php foreach ($list as $item) : ?>
         <a class="list-group-item" href="<?php echo $item->link; ?>">
             <?php $images = json_decode($item->images); ?>
             <?php if (isset($images->image_intro) and ! empty($images->image_intro)) :
                 ?>
-        <?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
+        <?php $imgfloat = (empty($images->float_intro)) ? "left" : $images->float_intro; ?>
                 <div class="img-intro-<?php echo htmlspecialchars($imgfloat); ?>">
                     <img
                     <?php

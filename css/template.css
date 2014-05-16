@@ -57,6 +57,12 @@
 .blog-more {
   padding: 10px 5px;
 }
+.img-intro-right {
+  float: right;
+}
+.img-intro-left {
+  float: left;
+}
 html,
 body {
   height: 100%;

@@ -1,6 +1,13 @@
 /*
 add custom css in template here
 */
+.item-image,
+[class|="img-intro"] {
+  padding-right: .8em;
+}
+.latestnews [class|="img-intro"] img {
+  max-width: 7em;
+}
 .nav-quick-wrapper {
   background-color: #EEE;
   padding: 1em;
