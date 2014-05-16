@@ -11,6 +11,53 @@ add custom css in template here
 .blog .item-image img {
   max-width: 13em;
 }
+.nav-sidebar .nav > li > a,
+.nav-sidebar .nav > li .separator {
+  font-size: .9em;
+  font-weight: 400;
+}
+.nav-sidebar .nav > li > a:hover,
+.nav-sidebar .nav > li > a:focus {
+  background-color: rgba(0, 0, 0, 0);
+  color: #563D7C;
+  text-decoration: none;
+}
+.nav-sidebar .nav .current.active > a {
+  background-color: rgba(0, 0, 0, 0);
+  color: #563D7C;
+  font-weight: 700;
+}
+.nav-sidebar > .nav > li > a,
+.nav-sidebar > .nav > li .separator {
+  padding: 0.2em 1.1em;
+}
+.nav-sidebar > .nav > li > a {
+  border-top: 1px solid #cccccc;
+  font-size: 1em;
+  padding: 0.72em 1.1em;
+}
+.nav-sidebar > .nav .nav > li > a,
+.nav-sidebar > .nav .nav > li .separator {
+  padding: 0.2em 2.2em;
+}
+.nav-sidebar > .nav .nav .nav > li > a,
+.nav-sidebar > .nav .nav .nav > li .separator {
+  padding: 0.2em 3.3000000000000003em;
+}
+.nav-sidebar > .nav .nav .nav .nav > li > a,
+.nav-sidebar > .nav .nav .nav .nav > li .separator {
+  padding: 0.2em 4.4em;
+}
+.nav-sidebar > .nav .nav .nav .nav .nav > li > a,
+.nav-sidebar > .nav .nav .nav .nav .nav > li .separator {
+  padding: 0.2em 5.5em;
+}
+.nav-sidebar > .nav > li > ul.nav {
+  margin-bottom: 10px;
+}
+.nav-sidebar > .nav > li:last-child {
+  border-bottom: 1px solid #cccccc;
+}
 .nav-quick-wrapper {
   background-color: #EEE;
   padding: 1em;
