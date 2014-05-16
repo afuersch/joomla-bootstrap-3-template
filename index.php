@@ -127,9 +127,9 @@ include 'includes/params.php';
                 <div id="main" class="row show-grid">
                     <!--left-->
                     <?php if ($this->countModules('left')) : ?>
-                        <nav id="sidebar" class="sidebar col-sm-<?php echo $leftcolgrid; ?>">
-                            <jdoc:include type="modules" name="left" style="xhtml" />
-                        </nav>
+                        <div id="sidebar-left" class="sidebar col-sm-<?= $leftcolgrid ?>">
+                            <jdoc:include type="modules" name="left" style="custom" />
+                        </div>
                     <?php endif; ?>
                     <!--left-->
                     <!--component-->
@@ -158,8 +158,8 @@ include 'includes/params.php';
                     <!--component-->
                     <!--right-->
                     <?php if ($this->countModules('right')) : ?>
-                        <div id="sidebar-2" class="col-sm-<?php echo $rightcolgrid; ?>">
-                            <jdoc:include type="modules" name="right" style="xhtml" />
+                        <div id="sidebar-right" class="col-sm-<?= $rightcolgrid ?>">
+                            <jdoc:include type="modules" name="right" style="custom" />
                         </div>
                     <?php endif; ?>
                     <!--right-->
