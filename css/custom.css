@@ -8,6 +8,9 @@ add custom css in template here
 .latestnews [class|="img-intro"] img {
   max-width: 7em;
 }
+.blog .item-image img {
+  max-width: 13em;
+}
 .nav-quick-wrapper {
   background-color: #EEE;
   padding: 1em;
