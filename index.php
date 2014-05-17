@@ -52,16 +52,18 @@ include 'includes/params.php';
                     <div class="clearfix"></div>
                     <!-- header -->
                     <div role="banner" id="header">
+                        <?php if ($this->params->get('show_logo_and_page_title') != 0) : ?>
                         <div class="pull-left">
-                            <h1><?php echo $this->params->get('page_title') ?></h1>
+                            <h1><?= $this->params->get('page_title') ?></h1>
                         </div>
                         <div class="pull-right">
-                            <a href="<?php echo $this->params->get('logo_link') ?>">
-                                <img style="width:<?php echo $this->params->get('logo_width') ?>px; height:<?php echo $this->params->get('logo_height') ?>px; "
-                                     src="<?php echo $this->params->get('logo_file') ?>" 
+                            <a href="<?= $this->params->get('logo_link') ?>">
+                                <img style="width:<?= $this->params->get('logo_width') ?>px; height:<?= $this->params->get('logo_height') ?>px; "
+                                     src="<?= $this->params->get('logo_file') ?>" 
                                      alt="Logo" />
                             </a>
                         </div>
+                        <?php endif; ?>
                         <?php if ($this->countModules('header')) : ?>
                             <jdoc:include type="modules" name="header" style="none" />
                         <?php endif; ?>

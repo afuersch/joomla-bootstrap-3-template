@@ -93,6 +93,14 @@
             </fieldset>
             <!-- LOGO and page title-->
             <fieldset name="logo" type="upload_func" label="Logo and page title">
+                <field name="show_logo_and_page_title" 
+                       type="radio"
+                       default="1"
+                       label="Show Logo and Page title:" 
+                       description="Select yes, if you want to show the logo and the page title on the site.">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
                 <field name="page_title" type="text" label="Page title:" description="Set the page title, which is shown in the header."></field>
                 <field name="logo_file" type="media" label="Select your logo:"></field>
                 <field name="logo_link" type="text" label="Logo link:"  description="Example: http://www.ordasoft.com" default="index.php"></field>
