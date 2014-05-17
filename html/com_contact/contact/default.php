@@ -112,9 +112,18 @@ jimport('joomla.html.html.bootstrap');
 		<?php if ($this->params->get('presentation_style') == 'tabs') : ?>
 			<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'display-form', JText::_('COM_CONTACT_EMAIL_FORM', true)); ?>
 		<?php endif; ?>
-		<?php if ($this->params->get('presentation_style') == 'plain'):?>
-			<?php echo '<h3>'. JText::_('COM_CONTACT_EMAIL_FORM').'</h3>';  ?>
-		<?php endif; ?>
+                <?php if ($this->params->get('presentation_style') == 'plain'): ?>
+                    <?php echo '<h3>' . JText::_('COM_CONTACT_EMAIL_FORM') . '</h3>'; ?>
+
+                    <?php if ($this->contact->misc && $this->params->get('show_misc')) : ?>
+                        <div class="contact-miscinfo">
+                            <span class="contact-misc">
+                                <?php echo $this->contact->misc; ?>
+                            </span>
+                        </div>
+                    <?php endif; ?>
+
+                <?php endif; ?>
 
 		<?php  echo $this->loadTemplate('form');  ?>
 
@@ -185,9 +194,7 @@ jimport('joomla.html.html.bootstrap');
 		<?php if ($this->params->get('presentation_style') == 'tabs') : ?>
 			<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'display-misc', JText::_('COM_CONTACT_OTHER_INFORMATION', true)); ?>
 		<?php endif; ?>
-		<?php if ($this->params->get('presentation_style') == 'plain'):?>
-			<?php echo '<h3>'. JText::_('COM_CONTACT_OTHER_INFORMATION').'</h3>';  ?>
-		<?php endif; ?>
+		<?php if (!$this->params->get('presentation_style') == 'plain'):?>
 
 		<div class="contact-miscinfo">
 			<dl class="dl-horizontal">
@@ -203,6 +210,7 @@ jimport('joomla.html.html.bootstrap');
 				</dd>
 			</dl>
 		</div>
+                <?php endif; ?>
 
 		<?php if ($this->params->get('presentation_style') == 'sliders') : ?>
 			<?php echo JHtml::_('bootstrap.endSlide'); ?>
