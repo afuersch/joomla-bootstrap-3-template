@@ -34,6 +34,7 @@
         <position>top</position>
         <position>top-left</position>
         <position>top-right</position>
+        <position>header</position>
         <position>navigation</position>
         <position>breadcrumbs</position>
         <position>fullwidth</position>

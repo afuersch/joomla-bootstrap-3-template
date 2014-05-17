@@ -1,11 +1,13 @@
 <?php
-/* ------------------------------------------------------------------------
-  # author    Gonzalo Suez
-  # author    Adrian Fürschuß
-  # copyright Copyright © 2013 gsuez.cl. All rights reserved.
-  # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-  # Website   http://www.gsuez.cl
-  ------------------------------------------------------------------------- */
+/**
+ * @package     Joomla.Site
+ * @subpackage  Templates.joomla-bootstrap-3-template
+ *
+ * @author      Gonzalo Suez
+ * @author      Adrian Fürschuß
+ * @copyright   Copyright (C) 2013 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
 // no direct access
 defined('_JEXEC') or die;
 
@@ -60,6 +62,9 @@ include 'includes/params.php';
                                      alt="Logo" />
                             </a>
                         </div>
+                        <?php if ($this->countModules('header')) : ?>
+                            <jdoc:include type="modules" name="header" style="none" />
+                        <?php endif; ?>
                     </div>
                     <!-- header -->
                 </div>
