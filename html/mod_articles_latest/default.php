@@ -10,6 +10,7 @@
 defined('_JEXEC') or die;
 ?>
 <div class="list-group latestnews<?= $moduleclass_sfx ?>">
+    <h3 class="list-group-item"><?= $module->title ?></h3>
     <?php foreach ($list as $item) : ?>
         <a class="list-group-item" href="<?php echo $item->link; ?>">
             <?php $images = json_decode($item->images); ?>
@@ -20,7 +21,9 @@ defined('_JEXEC') or die;
                     <img
                     <?php
                     if ($images->image_intro_caption):
-                        echo 'class="caption"' . ' title="' . htmlspecialchars($images->image_intro_caption) . '"';
+                        echo 'class="img-rounded caption"' . ' title="' . htmlspecialchars($images->image_intro_caption) . '"';
+                    else:
+                        echo 'class="img-rounded"';
                     endif;
                     ?>
                         src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
