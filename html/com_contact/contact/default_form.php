@@ -26,7 +26,10 @@ $colRight = 12 - $colLeft
 <div class="contact-form">
     <form id="contact-form" role="form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate form-horizontal">
         <fieldset>
-            <legend><?php echo JText::_('COM_CONTACT_FORM_LABEL'); ?></legend>
+            <div class="alert alert-info alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <?php echo JText::_('COM_CONTACT_FORM_LABEL'); ?>
+            </div>
             <div class="form-group">
                 <div class="col-sm-<?= $colLeft ?> control-label"><?php echo $this->form->getLabel('contact_name'); ?></div>
                 <div class="col-sm-<?= $colRight ?>">
