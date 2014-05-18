@@ -88,12 +88,17 @@
                 </field>
                 
                 <!-- FONT-AWESOME -->
-                <field name="fontawesome" type="radio" default="0" 
-                       label="Font Awesome" 
-                       description="Enable Font Awesome for better icons in Bootstrap">
+                <field
+                    name="fontawesome"
+                    type="radio"
+                    default="0"
+                    label="TPL_BOOTSTRAP3_FONT_AWESOME_LABEL"
+                    description="TPL_BOOTSTRAP3_FONT_AWESOME_DESC"
+                >
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
+                
                 <!-- PIE-->
                 <field name="pie" type="radio" default="0" 
                        label="PIE" 
