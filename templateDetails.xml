@@ -134,7 +134,12 @@
                     default="173"
                     label="TPL_BOOTSTRAP3_LOGO_WIDTH_LABEL"
                     description="TPL_BOOTSTRAP3_LOGO_WIDTH_DESC" />
-                <field name="logo_height" type="text" label="Logo height:" description="Example: 90" default="26"></field>
+                <field
+                    name="logo_height"
+                    type="text"
+                    default="26"
+                    label="TPL_BOOTSTRAP3_LOGO_HEIGHT_LABEL"
+                    description="TPL_BOOTSTRAP3_LOGO_HEIGHT_DESC" />
             </fieldset>
         </fields>
     </config>
