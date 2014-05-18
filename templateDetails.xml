@@ -122,7 +122,12 @@
                     type="media"
                     label="TPL_BOOTSTRAP3_LOGO_FILE_LABEL"
                     description="TPL_BOOTSTRAP3_LOGO_FILE_DESC" />
-                <field name="logo_link" type="text" label="Logo link:"  description="Example: http://www.ordasoft.com" default="index.php"></field>
+                <field
+                    name="logo_link"
+                    type="text"
+                    default="index.php"
+                    label="TPL_BOOTSTRAP3_LOGO_LINK_LABEL"
+                    description="TPL_BOOTSTRAP3_LOGO_LINK_DESC" />
                 <field name="logo_width" type="text" label="Logo width:" description="Example: 90" default="173"></field>
                 <field name="logo_height" type="text" label="Logo height:" description="Example: 90" default="26"></field>
             </fieldset>
