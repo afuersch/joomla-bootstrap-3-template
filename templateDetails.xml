@@ -74,15 +74,19 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </field>
-				
 
                 <!-- MODERNIZR-->
-                <field name="modernizr" type="radio" default="0" 
-                       label="Modernizr" 
-                       description="Enable JavaScript modernizr.js in head">
+                <field 
+                    name="modernizr"
+                    type="radio"
+                    default="0"
+                    label="TPL_BOOTSTRAP3_MODERNIZR_LABEL"
+                    description="TPL_BOOTSTRAP3_MODERNIZR_DESC"
+                >
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
+                
                 <!-- FONT-AWESOME -->
                 <field name="fontawesome" type="radio" default="0" 
                        label="Font Awesome" 
