@@ -73,7 +73,8 @@ add custom css in template here
   font-size: 1em;
   text-transform: uppercase;
 }
-.nav-quick-wrapper a {
+.nav-quick-wrapper li a,
+.nav-quick-wrapper li span {
   font-size: 0.85em;
 }
 .footer-menu-wrapper {
