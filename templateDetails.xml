@@ -23,6 +23,7 @@
         <folder>images</folder>
         <folder>includes</folder>
         <folder>js</folder>
+        <folder>language</folder>
         <filename>component.php</filename>
         <filename>error.php</filename>
         <filename>index.php</filename>
@@ -48,64 +49,107 @@
         <position>footer</position>
         <position>debug</position>
     </positions>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_bootstrap3.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_bootstrap3.sys.ini</language>
+    </languages>
     <config>
         <fields name="params">
             <fieldset name="basic">
 
                 <!-- WIDTH MAIN-->
 	
-                <field name="leftColumnWidth" type="list" default="3" label="Left Column Width" description="Choose a width for your left column">
+                <field 
+                    name="leftColumnWidth" 
+                    type="list" 
+                    default="3" 
+                    label="TPL_BOOTSTRAP3_LEFT_COLUMN_WIDTH_LABEL" 
+                    description="TPL_BOOTSTRAP3_LEFT_COLUMN_WIDTH_DESC"
+                >
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </field>
 				
-                <field name="rightColumnWidth" type="list" default="3" label="Right Column Width" description="Choose a width for your right column">
+                <field 
+                    name="rightColumnWidth"
+                    type="list"
+                    default="3"
+                    label="TPL_BOOTSTRAP3_RIGHT_COLUMN_WIDTH_LABEL"
+                    description="TPL_BOOTSTRAP3_RIGHT_COLUMN_WIDTH_DESC"
+                >
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </field>
-				
 
                 <!-- MODERNIZR-->
-                <field name="modernizr" type="radio" default="0" 
-                                       label="Modernizr" 
-                                       description="Enable JavaScript modernizr.js in head">
+                <field 
+                    name="modernizr"
+                    type="radio"
+                    default="0"
+                    label="TPL_BOOTSTRAP3_MODERNIZR_LABEL"
+                    description="TPL_BOOTSTRAP3_MODERNIZR_DESC"
+                >
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
+                
                 <!-- FONT-AWESOME -->
-                <field name="fontawesome" type="radio" default="0" 
-                                       label="Font Awesome" 
-                                       description="Enable Font Awesome for better icons in Bootstrap">
+                <field
+                    name="fontawesome"
+                    type="radio"
+                    default="0"
+                    label="TPL_BOOTSTRAP3_FONT_AWESOME_LABEL"
+                    description="TPL_BOOTSTRAP3_FONT_AWESOME_DESC"
+                >
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
+                
                 <!-- PIE-->
-                <field name="pie" type="radio" default="0" 
-                                       label="PIE" 
-                                       description="Enable PIE (CSS3 for IE 9+8)">
+                <field
+                    name="pie"
+                    type="radio"
+                    default="0"
+                    label="TPL_BOOTSTRAP3_PIE_LABEL"
+                    description="TPL_BOOTSTRAP3_PIE_DESC"
+                >
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
             </fieldset>
-            <!-- LOGO and page title-->
-            <fieldset name="logo" type="upload_func" label="Logo and page title">
-                <field name="show_logo_and_page_title" 
-                       type="radio"
-                       default="1"
-                       label="Show Logo and Page title:" 
-                       description="Select yes, if you want to show the logo and the page title on the site.">
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-                <field name="page_title" type="text" label="Page title:" description="Set the page title, which is shown in the header."></field>
-                <field name="logo_file" type="media" label="Select your logo:"></field>
-                <field name="logo_link" type="text" label="Logo link:"  description="Example: http://www.ordasoft.com" default="index.php"></field>
-                <field name="logo_width" type="text" label="Logo width:" description="Example: 90" default="173"></field>
-                <field name="logo_height" type="text" label="Logo height:" description="Example: 90" default="26"></field>
+            
+            <!-- LOGO-->
+            <fieldset name="logo" 
+                      type="upload_func" 
+                      label="TPL_BOOTSTRAP3_FIELDSET_LOGO_LABEL"
+            >
+                <field
+                    name="logo_file"
+                    type="media"
+                    label="TPL_BOOTSTRAP3_LOGO_FILE_LABEL"
+                    description="TPL_BOOTSTRAP3_LOGO_FILE_DESC" />
+                <field
+                    name="logo_link"
+                    type="text"
+                    default="index.php"
+                    label="TPL_BOOTSTRAP3_LOGO_LINK_LABEL"
+                    description="TPL_BOOTSTRAP3_LOGO_LINK_DESC" />
+                <field
+                    name="logo_width"
+                    type="text"
+                    default="173"
+                    label="TPL_BOOTSTRAP3_LOGO_WIDTH_LABEL"
+                    description="TPL_BOOTSTRAP3_LOGO_WIDTH_DESC" />
+                <field
+                    name="logo_height"
+                    type="text"
+                    default="26"
+                    label="TPL_BOOTSTRAP3_LOGO_HEIGHT_LABEL"
+                    description="TPL_BOOTSTRAP3_LOGO_HEIGHT_DESC" />
             </fieldset>
         </fields>
     </config>
