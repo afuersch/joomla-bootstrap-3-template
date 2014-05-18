@@ -100,9 +100,13 @@
                 </field>
                 
                 <!-- PIE-->
-                <field name="pie" type="radio" default="0" 
-                       label="PIE" 
-                       description="Enable PIE (CSS3 for IE 9+8)">
+                <field
+                    name="pie"
+                    type="radio"
+                    default="0"
+                    label="TPL_BOOTSTRAP3_PIE_LABEL"
+                    description="TPL_BOOTSTRAP3_PIE_DESC"
+                >
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
