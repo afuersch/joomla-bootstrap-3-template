@@ -62,7 +62,13 @@
                     <option value="5">5</option>
                 </field>
 				
-                <field name="rightColumnWidth" type="list" default="3" label="Right Column Width" description="Choose a width for your right column">
+                <field 
+                    name="rightColumnWidth"
+                    type="list"
+                    default="3"
+                    label="TPL_BOOTSTRAP3_RIGHT_COLUMN_WIDTH_LABEL"
+                    description="TPL_BOOTSTRAP3_RIGHT_COLUMN_WIDTH_DESC"
+                >
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
