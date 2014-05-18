@@ -128,7 +128,12 @@
                     default="index.php"
                     label="TPL_BOOTSTRAP3_LOGO_LINK_LABEL"
                     description="TPL_BOOTSTRAP3_LOGO_LINK_DESC" />
-                <field name="logo_width" type="text" label="Logo width:" description="Example: 90" default="173"></field>
+                <field
+                    name="logo_width"
+                    type="text"
+                    default="173"
+                    label="TPL_BOOTSTRAP3_LOGO_WIDTH_LABEL"
+                    description="TPL_BOOTSTRAP3_LOGO_WIDTH_DESC" />
                 <field name="logo_height" type="text" label="Logo height:" description="Example: 90" default="26"></field>
             </fieldset>
         </fields>
