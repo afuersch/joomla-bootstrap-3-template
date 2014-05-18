@@ -5,17 +5,11 @@
     	<creationDate>01 OCT 2013</creationDate>
 	<author>Gonzalo Suez</author>
         <author>Adrian Fürschuß</author>
-	<copyright>Copyright © 2013 gsuez.cl</copyright>
+	<copyright>Copyright © 2013 - 2014 gsuez.cl, afuersch</copyright>
 	<authorEmail>info@gsuez.cl</authorEmail>
 	<authorUrl>http://www.gsuez.cl</authorUrl>
 	<version>Stable 1.0</version>
-	<description><![CDATA[ 
-		<h1>Master Bootstrap for Joomla! 3.0</h1>
-		<p>Un template para trabajar desde 0 con todas las ventajas de Twitter Bootstrap V 3.0.</p>
-		<p>A template for work from scrath, with all advantages of Twitter Bootstrap.</p>
-		<p>Created by <a href="http://www.gsuez.cl" target="_blank">Gonzalo Suez </a></p>
-		<p>Modified and changed for his purpose by Adrain</p>
-	]]></description>
+	<description>TPL_BOOTSTRAP3_XML_DESCRIPTION</description>
     <files>
         <folder>css</folder>
         <folder>fonts</folder>
@@ -127,6 +121,21 @@
                       type="upload_func" 
                       label="TPL_BOOTSTRAP3_FIELDSET_LOGO_LABEL"
             >
+                <field
+                    name="show_logo_and_page_title"
+                    type="radio"
+                    default="1"
+                    label="TPL_BOOTSTRAP3_SHOW_LOGO_AND_PAGE_TITLE_LABEL"
+                    description="TPL_BOOTSTRAP3_SHOW_LOGO_AND_PAGE_TITLE_DESC"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="page_title"
+                    type="text"
+                    label="TPL_BOOTSTRAP3_PAGE_TITLE_LABEL"
+                    description="TPL_BOOTSTRAP3_PAGE_TITLE_DESC" />
                 <field
                     name="logo_file"
                     type="media"
