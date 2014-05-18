@@ -1,11 +1,13 @@
 <?php
-/* ------------------------------------------------------------------------
-  # author    Gonzalo Suez
-  # author    Adrian Fürschuß
-  # copyright Copyright © 2013 gsuez.cl. All rights reserved.
-  # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-  # Website   http://www.gsuez.cl
-  ------------------------------------------------------------------------- */
+/**
+ * @package     Joomla.Site
+ * @subpackage  Templates.joomla-bootstrap-3-template
+ *
+ * @author      Gonzalo Suez
+ * @author      Adrian Fürschuß
+ * @copyright   Copyright (C) 2013 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
 // no direct access
 defined('_JEXEC') or die;
 
@@ -50,16 +52,21 @@ include 'includes/params.php';
                     <div class="clearfix"></div>
                     <!-- header -->
                     <div role="banner" id="header">
+                        <?php if ($this->params->get('show_logo_and_page_title') != 0) : ?>
                         <div class="pull-left">
-                            <h1><?php echo $this->params->get('page_title') ?></h1>
+                            <h1><?= $this->params->get('page_title') ?></h1>
                         </div>
                         <div class="pull-right">
-                            <a href="<?php echo $this->params->get('logo_link') ?>">
-                                <img style="width:<?php echo $this->params->get('logo_width') ?>px; height:<?php echo $this->params->get('logo_height') ?>px; "
-                                     src="<?php echo $this->params->get('logo_file') ?>" 
+                            <a href="<?= $this->params->get('logo_link') ?>">
+                                <img style="width:<?= $this->params->get('logo_width') ?>px; height:<?= $this->params->get('logo_height') ?>px; "
+                                     src="<?= $this->params->get('logo_file') ?>" 
                                      alt="Logo" />
                             </a>
                         </div>
+                        <?php endif; ?>
+                        <?php if ($this->countModules('header')) : ?>
+                            <jdoc:include type="modules" name="header" style="none" />
+                        <?php endif; ?>
                     </div>
                     <!-- header -->
                 </div>
