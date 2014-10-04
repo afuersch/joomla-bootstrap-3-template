@@ -1,0 +1,76 @@
+/**
+* include this file in your less file to use it.
+*/
+
+//sidebar mixin
+.rec-menu(@padding-left, @sidebar-border-color) {
+    & > li {
+        & > a, .separator {
+            padding: 0.2em @padding-left;
+        }
+    }
+}
+
+//side navigation
+@sidebar-padding-left: 1.1em;
+@sidebar-border-color: #ccc;
+@sidebar-link-color: #428bca;
+@sidebar-link-hover-color: #563D7C;
+@sidebar-link-active-color: @sidebar-link-hover-color;
+
+.nav-sidebar {
+    .nav {
+        & > li {
+            & > a, .separator {
+                font-size: .9em;
+                font-weight: 400;
+            }
+
+            & > a {
+                &:hover,
+                &:focus {
+                    background-color: rgba(0, 0, 0, 0);
+                    color: @sidebar-link-hover-color;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .current.active > a {
+            background-color: rgba(0, 0, 0, 0);
+            color: @sidebar-link-active-color;
+            font-weight: 700;
+        }
+
+    }
+    & > .nav {
+        .rec-menu(@sidebar-padding-left, @sidebar-border-color);
+        & > li > a {
+            border-top: 1px solid @sidebar-border-color;
+            font-size: 1em;
+            padding: 0.72em @sidebar-padding-left;
+        }
+
+        .nav {
+            .rec-menu(@sidebar-padding-left * 2, @sidebar-border-color);
+            .nav {
+                .rec-menu(@sidebar-padding-left * 3, @sidebar-border-color);
+                .nav {
+                    .rec-menu(@sidebar-padding-left * 4, @sidebar-border-color);
+                    .nav {
+                        .rec-menu(@sidebar-padding-left * 5, @sidebar-border-color);
+                    }
+                }
+            }
+        }
+
+        & > li {
+            & > ul.nav {
+                margin-bottom: 10px;
+            }
+            &:last-child {
+                border-bottom: 1px solid @sidebar-border-color;
+            }
+        }
+    }
+}
