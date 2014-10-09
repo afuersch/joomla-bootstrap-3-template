@@ -1,7 +1,70 @@
 /*
 add custom css in template here
 */
-@import "bootstrap/variables.less";
+@import "bootstrap/variables";
+@import "sidebar";
+
+// custom variables
+@orange-darker:            lighten(@orange, 13.5%);
+@orange-dark:              lighten(@orange, 20%);
+@orange:                   #FF9408;
+@orange-light:             #F1CD77;
+
+@link-color: @orange;
+@menu-link-color: @link-color;
+
+//meta navigation
+#topnav {
+    a {
+        color: @gray-light;
+        font-size: 0.9em;
+        &:hover,
+        &:focus {
+            color: @gray-darker;
+        }
+    }
+}
+
+//main navigation
+.navbar-default {
+    background-color: @orange;
+    .navbar-nav {
+        & > li > a {
+            &,
+            &:hover,
+            &:focus {
+                color: white;
+            }
+        }
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: white;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.navbar-default, .nav-child {
+    border: 0;
+    border-radius: 0;
+}
+
+.nav-child {
+    padding: 0;
+    & > li > a {
+        padding: 15px 20px;
+    }
+}
+
+//sidebar
+//side navigation
+@sidebar-border-color: #ccc;
+@sidebar-link-color: @link-color;
+@sidebar-link-hover-color: @orange-light;
+@sidebar-link-active-color: @sidebar-link-hover-color;
 
 //images
 .item-image,
@@ -23,80 +86,6 @@ add custom css in template here
         }
         .date {
             color: @gray-light;
-        }
-    }
-}
-
-//sidebar
-//side navigation
-.rec-menu(@padding-left, @sidebar-border-color) {
-    & > li {
-        & > a, .separator {
-            padding: 0.2em @padding-left;
-        }
-    }
-}
-
-@sidebar-padding-left: 1.1em;
-@sidebar-border-color: #ccc;
-
-.nav-sidebar {
-    .nav {
-        & > li {
-            & > a, .separator {
-                font-size: .9em;
-                font-weight: 400;
-            }
-
-            & > a {
-                &:hover,
-                    &:focus {
-                    background-color: rgba(0, 0, 0, 0);
-                    //border-left: 1px solid #563D7C;
-                    color: #563D7C;
-                    //padding-left: 19px;
-                    text-decoration: none;
-                }
-            }
-        }
-
-        .current.active > a {
-            background-color: rgba(0, 0, 0, 0);
-            //border-left: 2px solid #563D7C;
-            color: #563D7C;
-            font-weight: 700;
-            //padding-left: 18px;
-        }
-
-    }
-    & > .nav {
-        .rec-menu(@sidebar-padding-left, @sidebar-border-color);
-        & > li > a {
-            border-top: 1px solid @sidebar-border-color;
-            font-size: 1em;
-            padding: 0.72em @sidebar-padding-left;
-        }
-
-        .nav {
-            .rec-menu(@sidebar-padding-left * 2, @sidebar-border-color);
-            .nav {
-                .rec-menu(@sidebar-padding-left * 3, @sidebar-border-color);
-                .nav {
-                    .rec-menu(@sidebar-padding-left * 4, @sidebar-border-color);
-                    .nav {
-                        .rec-menu(@sidebar-padding-left * 5, @sidebar-border-color);
-                    }
-                }
-            }
-        }
-
-        & > li {
-            & > ul.nav {
-                margin-bottom: 10px;
-            }
-            &:last-child {
-                border-bottom: 1px solid @sidebar-border-color;
-            }
         }
     }
 }

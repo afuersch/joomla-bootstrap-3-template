@@ -1,33 +1,26 @@
 /*
 add custom css in template here
 */
-.item-image,
-[class|="img-intro"] {
-  padding-right: .8em;
-}
-.latestnews [class|="img-intro"] img {
-  max-width: 7em;
-}
-.blog .news-item .item-image img {
-  max-width: 10em;
-}
-.blog .news-item .date {
-  color: #999999;
-}
+/**
+* include this file in your less file to use it.
+*/
 .nav-sidebar .nav > li > a,
 .nav-sidebar .nav > li .separator {
   font-size: .9em;
   font-weight: 400;
 }
+.nav-sidebar .nav > li > a {
+  color: #ff9408;
+}
 .nav-sidebar .nav > li > a:hover,
 .nav-sidebar .nav > li > a:focus {
   background-color: rgba(0, 0, 0, 0);
-  color: #563D7C;
+  color: #f1cd77;
   text-decoration: none;
 }
 .nav-sidebar .nav .current.active > a {
   background-color: rgba(0, 0, 0, 0);
-  color: #563D7C;
+  color: #f1cd77;
   font-weight: 700;
 }
 .nav-sidebar > .nav > li > a,
@@ -38,6 +31,7 @@ add custom css in template here
   border-top: 1px solid #cccccc;
   font-size: 1em;
   padding: 0.72em 1.1em;
+  color: #ff9408;
 }
 .nav-sidebar > .nav .nav > li > a,
 .nav-sidebar > .nav .nav > li .separator {
@@ -45,7 +39,7 @@ add custom css in template here
 }
 .nav-sidebar > .nav .nav .nav > li > a,
 .nav-sidebar > .nav .nav .nav > li .separator {
-  padding: 0.2em 3.3000000000000003em;
+  padding: 0.2em 3.3em;
 }
 .nav-sidebar > .nav .nav .nav .nav > li > a,
 .nav-sidebar > .nav .nav .nav .nav > li .separator {
@@ -60,6 +54,52 @@ add custom css in template here
 }
 .nav-sidebar > .nav > li:last-child {
   border-bottom: 1px solid #cccccc;
+}
+#topnav a {
+  color: #999999;
+  font-size: 0.9em;
+}
+#topnav a:hover,
+#topnav a:focus {
+  color: #222222;
+}
+.navbar-default {
+  background-color: #ff9408;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: white;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: transparent;
+}
+.navbar-default,
+.nav-child {
+  border: 0;
+  border-radius: 0;
+}
+.nav-child {
+  padding: 0;
+}
+.nav-child > li > a {
+  padding: 15px 20px;
+}
+.item-image,
+[class|="img-intro"] {
+  padding-right: .8em;
+}
+.latestnews [class|="img-intro"] img {
+  max-width: 7em;
+}
+.blog .news-item .item-image img {
+  max-width: 10em;
+}
+.blog .news-item .date {
+  color: #999999;
 }
 .nav-quick-wrapper {
   background-color: #EEE;
