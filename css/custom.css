@@ -39,7 +39,7 @@ add custom css in template here
 }
 .nav-sidebar > .nav .nav .nav > li > a,
 .nav-sidebar > .nav .nav .nav > li .separator {
-  padding: 0.2em 3.3em;
+  padding: 0.2em 3.3000000000000003em;
 }
 .nav-sidebar > .nav .nav .nav .nav > li > a,
 .nav-sidebar > .nav .nav .nav .nav > li .separator {
@@ -55,13 +55,49 @@ add custom css in template here
 .nav-sidebar > .nav > li:last-child {
   border-bottom: 1px solid #cccccc;
 }
-#topnav a {
+a {
+  color: #ff9408;
+}
+a:hover,
+a:focus {
+  color: #ffc06e;
+}
+.btn-primary {
+  background-color: #ff9408;
+  border-color: #d47800;
+  color: white;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle .btn-primary {
+  background-color: #ffc06e;
+  border-color: #ff9408;
+  color: white;
+}
+.btn-link {
+  color: #ff9408;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #ffc06e;
+}
+#topnav a,
+.footer-menu-wrapper a {
   color: #999999;
-  font-size: 0.9em;
 }
 #topnav a:hover,
-#topnav a:focus {
+.footer-menu-wrapper a:hover,
+#topnav a:focus,
+.footer-menu-wrapper a:focus {
   color: #222222;
+}
+#topnav a,
+.footer-menu-wrapper a,
+#topnav .separator,
+.footer-menu-wrapper .separator {
+  font-size: 0.9em;
 }
 .navbar-default {
   background-color: #ff9408;
@@ -87,6 +123,19 @@ add custom css in template here
 }
 .nav-child > li > a {
   padding: 15px 20px;
+}
+.nav-child > li > a:hover,
+.nav-child > li > a:focus {
+  background-color: #ff9408;
+  color: white;
+}
+.nav-child > .active > a,
+.nav-child > .active > a:hover,
+.nav-child > .active > a:focus {
+  background-color: #ffc06e;
+}
+.breadcrumb {
+  background-color: transparent;
 }
 .item-image,
 [class|="img-intro"] {

@@ -11,17 +11,47 @@ add custom css in template here
 @orange-light:             #F1CD77;
 
 @link-color: @orange;
+@link-hover-color: @orange-dark;
 @menu-link-color: @link-color;
 
+//common styles
+a {
+    color: @link-color;
+    &:hover, &:focus {
+        color: @link-hover-color;
+    }
+}
+
+//buttons
+.btn-primary {
+    background-color: @link-color;
+    border-color: darken(@link-color, 10%);
+    color: white;
+
+    &:hover, &:focus, &:active, &.active, .open .dropdown-toggle & {
+        background-color: @link-hover-color;
+        border-color: @link-color;
+        color: white;
+    }
+}
+.btn-link {
+    color: @link-color;
+    &:hover, &:focus {
+        color: @link-hover-color;
+    }
+}
+
 //meta navigation
-#topnav {
+#topnav, .footer-menu-wrapper {
     a {
         color: @gray-light;
-        font-size: 0.9em;
         &:hover,
         &:focus {
             color: @gray-darker;
         }
+    }
+    a, .separator {
+        font-size: 0.9em;
     }
 }
 
@@ -56,6 +86,18 @@ add custom css in template here
     padding: 0;
     & > li > a {
         padding: 15px 20px;
+        &:hover, &:focus {
+            background-color: @link-color;
+            color: white;
+        }
+    }
+    // Active state
+    & > .active > a {
+        &,
+        &:hover,
+        &:focus {
+            background-color: @link-hover-color;
+        }
     }
 }
 
@@ -65,6 +107,11 @@ add custom css in template here
 @sidebar-link-color: @link-color;
 @sidebar-link-hover-color: @orange-light;
 @sidebar-link-active-color: @sidebar-link-hover-color;
+
+//content related stuff below
+.breadcrumb {
+    background-color: transparent;
+}
 
 //images
 .item-image,
