@@ -4,8 +4,8 @@
   # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
   ------------------------------------------------------------------------- */
 
-@import "bootstrap/variables.less";
-@import "bootstrap/mixins.less";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
 
 //
 // Dropdown menus
@@ -86,7 +86,6 @@
 // Disabled state
 //
 // Gray out text and ensure the hover/focus state remains gray
-
 .nav-child > .disabled > a {
     &,
     &:hover,
@@ -107,16 +106,19 @@
 }
 
 // navbar hover
-// open the dropdown by hovering over the parent item
-.parent:hover .nav-child {
-    display: block;
-}
+// open the dropdown by hovering over the parent item only if nav is not collapsed.
+@media (min-width: @screen-sm-min) {
+    
+    .parent:hover .nav-child {
+        display: block;
+    }
 
-// remove the gap between dropdown and navbar
-.nav-tabs,
-.nav-pills, 
-.navbar {
-    .nav-child {
-        margin-top: 0;
+    // remove the gap between dropdown and navbar
+    .nav-tabs,
+    .nav-pills, 
+    .navbar {
+        .nav-child {
+            margin-top: 0;
+        }
     }
 }

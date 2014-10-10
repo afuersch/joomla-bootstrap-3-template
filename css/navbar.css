@@ -72,11 +72,13 @@
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   cursor: not-allowed;
 }
-.parent:hover .nav-child {
-  display: block;
-}
-.nav-tabs .nav-child,
-.nav-pills .nav-child,
-.navbar .nav-child {
-  margin-top: 0;
+@media (min-width: 768px) {
+  .parent:hover .nav-child {
+    display: block;
+  }
+  .nav-tabs .nav-child,
+  .nav-pills .nav-child,
+  .navbar .nav-child {
+    margin-top: 0;
+  }
 }
