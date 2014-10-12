@@ -4,11 +4,6 @@
   # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
   ------------------------------------------------------------------------- */
 
-// CSS Fix for contact form
-.hasTooltip {
-    display: inline !important;
-}
-
 /* JOOMLA */
 
 .cols-1 {
@@ -16,31 +11,35 @@
     float: none !important;
     margin: 0 !important;
 }
-.cols-2 .column-1 {
-    float: left;
-    width: 46%;
+.cols-2 { 
+    .column-1 {
+        float: left;
+        width: 46%;
+    }
+    .column-2 {
+        float: right;
+        margin: 0;
+        width: 46%;
+    }
 }
-.cols-2 .column-2 {
-    float: right;
-    margin: 0;
-    width: 46%;
-}
-.cols-3 .column-1 {
-    float: left;
-    margin-right: 4%;
-    padding: 0 5px;
-    width: 29%;
-}
-.cols-3 .column-2 {
-    float: left;
-    margin-left: 0;
-    padding: 0 5px;
-    width: 29%;
-}
-.cols-3 .column-3 {
-    float: right;
-    padding: 0 5px;
-    width: 29%;
+.cols-3 {
+    .column-1 {
+        float: left;
+        margin-right: 4%;
+        padding: 0 5px;
+        width: 29%;
+    }
+    .column-2 {
+        float: left;
+        margin-left: 0;
+        padding: 0 5px;
+        width: 29%;
+    }
+    .column-3 {
+        float: right;
+        padding: 0 5px;
+        width: 29%;
+    }
 }
 .items-row {
     margin-bottom: 10px !important;
@@ -68,28 +67,13 @@
     float: left;
 }
 
-// sticky footer
-html,
-body {
-    height: 100%;
-}
+//list all the bootstrap styles and leave them empty to be generated
+.table { /**/ }
+.table-condensed { /**/ }
+.table-bordered { /**/ }
+.table-striped { /**/ }
+.table-hover { /**/ }
 
-/*body {
-  display: table;
-  margin:0;
-  padding:0;
-  width: 100%;
-}
-
-footer {
-  display: table-row;
-}
-
-.wrapper { 
-    display: table-row;
-    height: 100%;
-}*/
-
-.push {
-  height: 3em;
-}
+.img-rounded { /**/ }
+.img-circle  { /**/ }
+.img-thumbnail { /**/ }

@@ -192,3 +192,6 @@ a:focus {
 .footer-menu-wrapper {
   margin-top: 1em;
 }
+.hasTooltip {
+  display: inline !important;
+}

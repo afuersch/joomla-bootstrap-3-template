@@ -3,9 +3,6 @@
   # copyright Copyright © 2014. All rights reserved.
   # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
   ------------------------------------------------------------------------- */
-.hasTooltip {
-  display: inline !important;
-}
 /* JOOMLA */
 .cols-1 {
   display: block;
@@ -63,25 +60,27 @@
 .img-intro-left {
   float: left;
 }
-html,
-body {
-  height: 100%;
+.table {
+  /**/
 }
-/*body {
-  display: table;
-  margin:0;
-  padding:0;
-  width: 100%;
+.table-condensed {
+  /**/
 }
-
-footer {
-  display: table-row;
+.table-bordered {
+  /**/
 }
-
-.wrapper { 
-    display: table-row;
-    height: 100%;
-}*/
-.push {
-  height: 3em;
+.table-striped {
+  /**/
+}
+.table-hover {
+  /**/
+}
+.img-rounded {
+  /**/
+}
+.img-circle {
+  /**/
+}
+.img-thumbnail {
+  /**/
 }
