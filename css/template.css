@@ -60,27 +60,37 @@
 .img-intro-left {
   float: left;
 }
+.download {
+  background-image: url('../images/download.png');
+  background-position: 1em center;
+  background-repeat: no-repeat;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  display: inline-block;
+  padding: 10px 10px 10px 3.5em;
+  width: 100%;
+}
 .table {
-  /**/
+  width: 100%;
 }
 .table-condensed {
-  /**/
+  width: 100%;
 }
 .table-bordered {
-  /**/
+  width: 100%;
 }
 .table-striped {
-  /**/
+  width: 100%;
 }
 .table-hover {
-  /**/
+  width: 100%;
 }
 .img-rounded {
-  /**/
+  border-radius: 6px;
 }
 .img-circle {
-  /**/
+  border-radius: 50%;
 }
 .img-thumbnail {
-  /**/
+  height: auto;
 }

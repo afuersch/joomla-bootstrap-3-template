@@ -12,30 +12,30 @@
     margin: 0 !important;
 }
 .cols-2 { 
-    .column-1 {
+    & .column-1 {
         float: left;
         width: 46%;
     }
-    .column-2 {
+    & .column-2 {
         float: right;
         margin: 0;
         width: 46%;
     }
 }
 .cols-3 {
-    .column-1 {
+    & .column-1 {
         float: left;
         margin-right: 4%;
         padding: 0 5px;
         width: 29%;
     }
-    .column-2 {
+    & .column-2 {
         float: left;
         margin-left: 0;
         padding: 0 5px;
         width: 29%;
     }
-    .column-3 {
+    & .column-3 {
         float: right;
         padding: 0 5px;
         width: 29%;
@@ -67,13 +67,25 @@
     float: left;
 }
 
-//list all the bootstrap styles and leave them empty to be generated
-.table { /**/ }
-.table-condensed { /**/ }
-.table-bordered { /**/ }
-.table-striped { /**/ }
-.table-hover { /**/ }
+//download links
+.download {
+    background-image: url('../images/download.png');
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    display: inline-block;
+    padding: 10px 10px 10px 3.5em;
+    width: 100%;
+}
 
-.img-rounded { /**/ }
-.img-circle  { /**/ }
-.img-thumbnail { /**/ }
+//list all the bootstrap styles and leave them empty to be generated
+.table { width: 100%;}
+.table-condensed { width: 100%; }
+.table-bordered { width: 100%; }
+.table-striped { width: 100%; }
+.table-hover { width: 100%; }
+
+.img-rounded { border-radius: 6px; }
+.img-circle  { border-radius: 50%; }
+.img-thumbnail { height: auto; }
