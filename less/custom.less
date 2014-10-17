@@ -45,8 +45,7 @@ a {
 #topnav, .footer-menu-wrapper {
     a {
         color: @gray-light;
-        &:hover,
-        &:focus {
+        &:hover, &:focus {
             color: @gray-darker;
         }
     }
@@ -62,16 +61,14 @@ a {
     .navbar-nav {
         & > li > a {
             color: white;
-            &:hover,
-            &:focus {
+            &:hover, &:focus {
                 background-color: white;
                 color: black;
             }
         }
         > .active > a {
             background-color: @link-hover-color;
-            &:hover,
-            &:focus {
+            &:hover, &:focus {
                 background-color: white;
                 color: black;
             }
@@ -106,8 +103,7 @@ a {
     // Active state
     & > .active > a {
         &,
-        &:hover,
-        &:focus {
+        &:hover, &:focus {
             background-color: @link-hover-color;
         }
     }
@@ -185,4 +181,10 @@ a {
 // CSS Fix for contact form
 .hasTooltip {
     display: inline !important;
+}
+
+.newsflash-horiz {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
